@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Language Translation</title>
+    <link rel="stylesheet" href="style.css" class="rel">
+</head>
+<body>
+    <header>
+        <h2 class="logo">
+            TransVerse
+        </h2>
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+          </li>
+            <a href="#">Translate</a>
+            <button class="btnLogin-popup" id="logout">Logout</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2 class="Logo1"><img sr="Images/Logo.png">Language Translation</h2>
+            <div class="text-sci">
+                <h2>Welcome!<br><span>To our New Real Time Translation Website.</span></h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, praesentium. At aspernatur, rerum reprehenderit incidunt itaque consequatur ut, distinctio provident voluptates, odit rem. Necessitatibus distinctio dolore ipsam perferendis culpa delectus.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="logreg-box">
+            <div class="form-boxL">
+                <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data">
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input id="login_email" name="login_email" type="text" class="form-control" required>
+                        <label class="emo" for="emails">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input name="login_password" id="login_password" type="password" class="form-control" required>
+                        <label class="pass" for="password">Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember Me</label>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <button type="button" id="login" name="login" class="btn btn-success">Sign In</button>
+                    <div class="login-register">
+                        <p>Don't have an account?<a href="#" class="register-link">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-boxR">
+                <form onsubmit="signup(event)">
+                    <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" name="" id="username" required>
+                        <label class="namu">Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input id="Email" name="" type="text" required>
+                        <label class="emo">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input id="password" type="password" name="" required>
+                        <label class="pass">Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to the terms & conditions</label>
+                    </div>
+                    <button id="sinupinp" value="Sign up" type="submit" class="btn" onclick="register()">Sign Up</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" class="login-link">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+    
+<script src="index.js" type="module"></script>
+
+</html>

@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo{
+  font-size: 2em;
+  color: #162938;
+  user-select: none;
+}
+
+.navigation a{
+  position: relative;
+  font-size: 1.1em;
+  color: #162938;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation .btnLogin-popup{
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #162938;
+  font-weight: 500;
+  margin-left: 40px;   
+  transition: 0.5s;
+}
+
+.navigation .btnLogin-popup:hover{
+  background: white;
+  color: #46c496;
+
+}
+
+.navigation a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #46c496 ;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform .5s ;
+}
+
+.navigation a:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+
+}
+
+body{
+    display: flex;
+    /* height: 10vh; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Home_Images/Homebg.png) no-repeat;
+    max-width: 100%;
+    height: auto;
+    background-size:cover;
+    background-position: center;
+}
+.container{
+  position: absolute;
+  max-width: 500px;
+  width: 100%;
+  top: 15%;
+  padding: 30px;
+  background: rgb(175, 230, 251);
+  border-radius: 7px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.01);
+}
+.wrapper{
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.wrapper .text-input{
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.text-input .to-text{
+  border-radius: 0px;
+  border-left: 1px solid black;
+}
+.text-input textarea{
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: lightyellow;
+  font-size: 1opx;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.text-input textarea::placeholder{
+  color: #951e1e;
+}
+.controls, li, .icons, .icons i{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls{
+  list-style: none;
+  padding: 12px 15px;
+}
+.controls .row .icons{
+  width: 38%;
+}
+.controls .row .icons i{
+  width: 20px;
+  color: #892323;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+.controls .row.from .icons{
+  padding-right: 10px;
+  border-right: 1px solid #892323;
+}
+.controls .row.to .icons{
+  padding-left: 10px;
+  border-left: 1px solid #892323;
+}
+.controls .row select{
+  color: #040202;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 5 px;
+  padding-right: 10px;
+}
+.text-input textarea::-webkit-scrollbar{
+  width: 4px;
+}
+.controls .row select::-webkit-scrollbar{
+  width: 8px;
+}
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track{
+  background: #970f0f;
+}
+.text-input textarea::-webkit-scrollbar-thumb{
+  background: #ddd;
+  border-radius: 8px;
+}
+.controls .row select::-webkit-scrollbar-thumb{
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+.controls .exchange{
+  color: #adadad;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+.controls i:active{
+  transform: scale(0.9);
+}
+.container button{
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 5px 5px 4px #888888;
+}
+
+@media (max-width: 660px){
+  .container{
+    padding: 20px;
+  }
+  .wrapper .text-input{
+    flex-direction: column;
+  }
+  .text-input .to-text{
+    border-left: 0px;
+    border-top: 1px solid #ccc;
+  }
+  .text-input textarea{
+    height: 200px;
+  }
+  .controls .row .icons{
+    display: none;
+  }
+  .container button{
+    padding: 13px;
+    font-size: 16px;
+  }
+  .controls .row select{
+    font-size: 16px;
+  }
+  .controls .exchange{
+    font-size: 14px;
+  }
+}
